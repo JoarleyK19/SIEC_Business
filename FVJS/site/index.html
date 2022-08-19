@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name = "format-detection" content = "telephone=no" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/stuck.css">
+    <link rel="stylesheet" href="css/camera.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/superfish.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/superfish.js"></script>
+    <script src="js/jquery.mobilemenu.js"></script>
+    <script src="js/camera.js"></script>
+    <!--[if (gt IE 9)|!(IE)]><!-->
+        <script src="js/jquery.mobile.customized.min.js"></script>
+    <!--<![endif]-->
+    
+    <script src="js/tmStickUp.js"></script>
+    <script src="js/owl.carousel.js"></script>
+
+    <script>
+        $(window).load(function(){
+            jQuery('#camera_wrap_1').camera({
+                height: '37.85%',
+                playPause: false,
+                time: 8000,
+                transPeriod: 1000,
+                fx: 'simpleFade',
+                loader: 'none',
+                minHeight:'150px',
+                navigation: false,
+                pagination: true,
+            });
+            var owl = $("#owl"); 
+                owl.owlCarousel({
+                items : 6, //10 items above 1000px browser width
+                itemsDesktop : [995,4], //5 items between 1000px and 901px
+                itemsDesktopSmall : [767, 2], // betweem 900px and 601px
+                itemsTablet: [700, 2], //2 items between 600 and 0
+                itemsMobile : [479, 1], // itemsMobile disabled - inherit from itemsTablet option
+                navigation : true,
+                pagination :  false
+            });
+        });
+    </script>
+    
+    <!--[if lt IE 9]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+         </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+    <![endif]-->
+    </head>
+    <body class="page-1" id="top">
+<!--==============================header=================================-->
+<header>
+    <div id="stuck_container">
+        <div class="container">
+            <div class="row">
+                <div class="grid_12">
+                    <h1><a href="index.html"><img src="images/logo.png" alt="nickton - Clerk of Works Services Company"></a> </h1>
+                    <nav>
+                        <ul class="sf-menu">
+                            <li class="current"><a href="index.html">Home</a></li>
+                            <li><a href="index-1.html">About</a>
+                                <ul>
+                                    <li><a href="#">history</a></li>
+                                    <li><a href="#">news</a>
+                                        <ul>
+                                            <li><a href="#">latest</a></li>
+                                            <li><a href="#">archive</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">testimonials</a></li>
+                               </ul>
+                            </li>
+                            <li><a href="index-2.html">Services</a></li>
+                            <li><a href="index-3.html">Clients</a></li>
+                            <li><a href="index-4.html">Contacts</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slider clearfix">
+        <div class="camera_wrap camera_azure_skin clearfix" id="camera_wrap_1">
+            <div data-src="images/slide-1.jpg">
+                <div class="camera_caption fadeIn">
+                    <div class="container">
+                        <div class="slider-text row">
+                            Offering  professional Clerk of <br> Works service
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-src="images/slide-2.jpg">
+                <div class="camera_caption fadeIn">
+                    <div class="container">
+                        <div class="slider-text row">
+                            We pursue quality and excellence in <br>all aspects of the construction 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-src="images/slide-3.jpg">
+                <div class="camera_caption fadeIn">
+                    <div class="container">
+                        <div class="slider-text row">
+                            We offer impartial advice <br>and high quality inspection service
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--=======content================================-->
+
+<section class="content">
+    <div class="bg-1">
+        <div class="container">
+            <div class="row">
+                <div class="grid_12">
+                    <h2>What We Offer</h2>
+                </div>
+                <div class="clearfix offer">
+                    <div class="grid_4 clearfix box-1">
+                        <img src="images/page-1_img-1.jpg" alt="">
+                        <div class="inside">
+                            <div class="title-1">Staffing</div>
+                            <div>At vero eos etresa accusamus et iusto odio dignissimos </div>
+                            <a href="#" class="btn">more</a>
+                        </div>
+                    </div>
+                    <div class="grid_4 clearfix box-1">
+                        <img src="images/page-1_img-2.jpg" alt="">
+                        <div class="inside">
+                            <div class="title-1">Control</div>
+                            <div>At vero eos etresa accusamus et iusto odio dignissimos </div>
+                            <a href="#" class="btn">more</a>
+                        </div>
+                    </div>
+                    <div class="grid_4 clearfix box-1">
+                        <img src="images/page-1_img-3.jpg" alt="">
+                        <div class="inside">
+                            <div class="title-1">Quality</div>
+                            <div>At vero eos etresa accusamus et iusto odio dignissimos </div>
+                            <a href="#" class="btn">more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-2">
+        <div class="container">
+            <div class="row">
+                <div class="grid_12">
+                    <h2>Reviews</h2>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore <br>et dolore magna aliqua. Ut enim ad minim veniam quis nostrudxercitation ullamco laboris nisi ut aliquip massa. </div>
+                </div>
+                <div class="clearfix">
+                    <div class="box-2 grid_3">
+                        <div class="img-circle"></div>
+                        <h2>Lorem <br>dolor sit amet </h2>
+                        <div>odio dignissimos ducimus qui blanditiis praesentium volupta.</div>
+                        <a href="#" class="link">more</a>
+                    </div>
+                    <div class="box-2 grid_3">
+                        <div class="img-circle"></div>
+                        <h2>Eiusmod <br>tempor </h2>
+                        <div>odio dignissimos ducimus qui blanditiis praesentium volupta.</div>
+                        <a href="#" class="link">more</a>
+                    </div>
+                    <div class="box-2 grid_3">
+                        <div class="img-circle"></div>
+                        <h2>Ncididunt <br>ute labore </h2>
+                        <div>odio dignissimos ducimus qui blanditiis praesentium volupta.</div>
+                        <a href="#" class="link">more</a>
+                    </div>
+                    <div class="box-2 grid_3">
+                        <div class="img-circle"></div>
+                        <h2>Et harum <br>quidem</h2>
+                        <div>odio dignissimos ducimus qui blanditiis praesentium volupta.</div>
+                        <a href="#" class="link">more</a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="grid_12">
+                <h2 class="v1">Mission Statements</h2>
+            </div>
+            <div class="clearfix statements">
+                <div class="grid_4">
+                    <img src="images/page-1_img-8.jpg" alt="" class="wrapper">
+                    <div class="text-3">Lorem ipsum dolor sit amet</div>
+                    <div>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip... </div>
+                    <a href="#" class="btn">more</a>
+                </div>
+                <div class="grid_4">
+                    <img src="images/page-1_img-9.jpg" alt="" class="wrapper">
+                    <div class="text-3">blanditiis praesentium</div>
+                    <div>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip... </div>
+                    <a href="#" class="btn">more</a>
+                </div>
+                <div class="grid_4">
+                    <img src="images/page-1_img-10.jpg" alt="" class="wrapper">
+                    <div class="text-3">eligendi optio</div>
+                    <div>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip... </div>
+                    <a href="#" class="btn">more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-3">
+        <div class="container">
+            <div class="row">
+                <div class="grid_12">
+                    <div id="owl" class="clearfix">
+                        <a href="#" class="item">
+                            <img src="images/logo-1.png" alt="">
+                        </a>
+                        <a href="#" class="item">
+                            <img src="images/logo-2.png" alt="">
+                        </a>
+                        <a href="#" class="item">
+                            <img src="images/logo-3.png" alt="">
+                        </a>
+                        <a href="#" class="item">
+                            <img src="images/logo-4.png" alt="">
+                        </a>
+                        <a href="#" class="item">
+                            <img src="images/logo-5.png" alt="">
+                        </a>
+                        <a href="#" class="item">
+                            <img src="images/logo-6.png" alt="">
+                        </a>
+                        <a href="#" class="item">
+                            <img src="images/logo-1.png" alt="">
+                        </a>
+                        <a href="#" class="item">
+                            <img src="images/logo-2.png" alt="">
+                        </a>
+                        <a href="#" class="item">
+                            <img src="images/logo-3.png" alt="">
+                        </a>
+                        <a href="#" class="item">
+                            <img src="images/logo-4.png" alt="">
+                        </a>
+                        <a href="#" class="item">
+                            <img src="images/logo-5.png" alt="">
+                        </a>
+                        <a href="#" class="item">
+                            <img src="images/logo-6.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--=======footer=================================-->
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="grid_12 aligncenter">
+                <ul class="socials clearfix">
+                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="fa fa-rss"></i></a></li>
+                    <li><a class="linkedin" href="#"><i class="fa fa-pinterest"></i></a></li>
+                    <li><a class="envelope" href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+                <div class="text-4">copyright</div>
+                <div class="copyright">
+                    <a href="index.html" class="h-underline"><span class="fz">nickton</span></a> &copy;     <span id="copyright-year"></span> &nbsp;<a href="index-5.html" class="h-underline">Privacy policy</a>
+                    <!--{%FOOTER_LINK} -->
+                </div>
+                <a href="#" onclick="goToByScroll('top'); return false;" class="top"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
