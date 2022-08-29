@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <title>Privacy Policy</title>
+    <meta charset="utf-8">
+    <meta name = "format-detection" content = "telephone=no" />
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/stuck.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/superfish.css' %}">
+
+
+    <!--[if lt IE 9]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+         </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="{% static 'js/html5shiv.js' %}"></script>
+        <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/ie.css' %}">
+    <![endif]-->
+    </head>
+    <body id="top">
+<!--==============================header=================================-->
+<header>
+    <div id="stuck_container">
+        <div class="container">
+            <div class="row">
+                <div class="grid_12">
+                    <h1><a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt="nickton - Clerk of Works Services Company"></a> </h1>
+                    <nav>
+                        <ul class="sf-menu">
+                            <li class="current"><a href="{% url 'index' %}">Início</a></li>
+                            <li><a href="{% url 'sobrenos' %}">Sobre Nós</a>
+                                <ul>
+                                    <li><a href="#">A Empresa</a></li>
+                                    <li><a href="#">O Grupo</a>
+                                        <ul>
+                                            <li><a href="#">Missão</a></li>
+                                            <li><a href="#">Visão</a></li>
+                                        </ul>
+                                    </li>
+                                    <!--------- <li><a href="#">Politica de Qualidade</a></li> ------->
+                               </ul>
+                            </li>
+
+                            <li><a href="{% url 'service' %}">Serviços</a>
+                                <ul>
+                                    <li><a href="#">Consultoria</a></li>
+                                    <li><a href="#">Alteamento </a></li>
+                                    <ul>
+                                        <li><a href="#">Barragem de Contenção de Rejeitos</a></li>
+
+                                    </ul>
+                                    <li><a href="#">Captação</a></li>
+                                    <li><a href="#">Auditorias</a></li>
+                                    <li><a href="#">Segurança</a></li>
+                                    <li><a href="#">Todos</a></li>
+                                    <li><a href="#">Certificações</a>
+                                        <ul>
+                                            <li><a href="#">ISO 9001:2015</a></li>
+                                            <li><a href="#">ISO 14001:2014</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'empresas' %}">Empresas Parceiras</a></li>
+
+                            <li><a href="{% url 'contato' %}">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--=======content================================-->
+
+<section class="content">
+    <div class="container">
+        <div class="row">
+            <div class="grid_4 fright">
+                <h2>Terms of Use</h2>
+                <p class="text-1">Faucibus ornare commodo a, molestie a ni. Mauris rutrum. Duis cies pharetra magna.</p>
+                <p>Sed mollis, nisl volutpat interdum iaculis, diam libero hendrerit tellus, et dictum leo tortor nec nisi. In eu lacinia risus. Cras dolor mi, placerat in malesuada eget, luctus sit amet sem. Etiam fringilla urna sit amet sapien.</p>
+                <p class="text-1">Libero arcu iaculis massa, et ull amcorper nisi enim ac erat. Lorem ipsum dolor sit amet.</p>
+                <p>Nunc fermentum sagittis tortor at placerat. Integer mollis adipiscing orci, id molestie elit aliquam at. Sed tincidunt mi eget tortor sodales non aliquet magna fermentum. Phasellus cursus orci eu tellus auctor blandit. Suspendisse potenti. Duis volutpat pulvinar urna ac mollis. Nulla dapibus, lacus vel malesuada ullamcorper, leo mauris lobortis velit, eget tristique. </p>
+                <p class="text-1">Praesent lacinia congue velit vitae mollis porta viverra volutpat. Mauris fermentu. </p>
+                <p>Aliquam a sapien enim, ut tristique nulla. Nam iaculis erat quis purus tincidunt dapibus. Aliquam vitae ante ut dolor pretium rutrum eu at sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada massa urna, ac feugiat tellus. Vivamus eget aliquam odio.</p>
+            </div>
+            <div class="grid_8">
+                <h2>Privacy Policy</h2>
+                <p class="text-1">Morbi pretium pretium adipiscing. Phasellus nisl arcu, faucibus ornare commodo a, moles tie a nibh. Mauris rutrum quam id dolor. Praesent vestibulum molestie lacus aenean.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida adipiscing scelerisque. Sed mollis, nisl volutpat interdum iaculis, diam libero hendrerit tellus, et dictum leo tortor nec nisi. In eu lacinia risus. Cras dolor mi, placerat in malesuada eget, luctus sit amet sem. Etiam fringilla urna sit amet sapien suscipit cursus. Nulla tristique pretium sapien in ornare. Ut urna arcu, cursus a venenatis a, accumsan at elit.</p>
+                <p class="text-1">Aenean lacinia, nulla nec faucibus egestas, libero arcu iaculis massa, et ullamcorper nisi enim ac erat. Phasellus quis magna. Phasellus porta. Fusce suscipit varius mi.</p>
+                <p>Nunc fermentum sagittis tortor at placerat. Integer mollis adipiscing orci, id molestie elit aliquam at. Sed tincidunt mi eget tortor sodales non aliquet magna fermentum. Phasellus cursus orci eu tellus auctor blandit. Suspendisse potenti. Duis volutpat pulvinar urna ac mollis. Nulla dapibus, lacus vel malesuada ullamcorper, leo mauris lobortis velit, eget tristique dolor ipsum id nulla. Aliquam consequat turpis sed justo varius nec pellentesque nunc pretium. Morbi hendrerit dignissim ligula id molestie. Donec elementum turpis sit amet sapien convallis eget lobortis lectus porttitor. </p>
+                <p class="text-1">Praesent lacinia congue velit vitae mollis. Phasellus porta viverra volutpat. Vestibulum turpis lacus, volutpat quis adipiscing sit amet. Cum sociis natoque penatibus et magnis. </p>
+                <p>Aliquam a sapien enim, ut tristique nulla. Nam iaculis erat quis purus tincidunt dapibus. Aliquam vitae ante ut dolor pretium rutrum eu at sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada massa urna, ac feugiat tellus. Vivamus eget aliquam odio. Pellentesque aliquet libero eu arcu iaculis ut consequat sapien euismod. Nam eget ligula ut felis vulputate bibendum ac fringilla ligula. Sed in dui mi, consequat facilisis magna. In hac habitasse platea dictumst. Donec tristique faucibus suscipit. Maecenas semper condimentum quam sed rhoncus. </p>
+                <p class="text-1">Phasellus ornare, odio a rhoncus bibendum, nunc enim congue. Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. </p>
+                <p>Vestibulum sit amet feugiat metus. Aliquam egestas, urna at mattis convallis, metus erat malesuada libero, non tincidunt urna est sed tortor. Donec tristique eros non magna gravida vitae adipiscing arcu rhoncus. Etiam a consectetur nisi. Quisque et ante nibh. Curabitur bibendum, justo at eleifend euismod, turpis urna vestibulum arcu, non sagittis erat massa at arcu. Maecenas eget nunc eu risus elementum lobortis eu at metus. </p>
+                <div><a href="#" class="link-1">privacy@demolink.org</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!--=======footer=================================-->
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="grid_12 aligncenter">
+                <ul class="socials clearfix">
+                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="fa fa-rss"></i></a></li>
+                    <li><a class="linkedin" href="#"><i class="fa fa-pinterest"></i></a></li>
+                    <li><a class="envelope" href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+                <div class="text-4">copyright</div>
+                <div class="copyright">
+                    <a href="{% url 'index' %}" class="h-underline"><span class="fz">FVJS GESTÃO DE NEGÓCIOS</span></a> &copy;     <span id="copyright-year"></span> &nbsp;<a href="{% url 'politicas' %}" class="h-underline">Política de provacidade</a>
+                </div>
+                <a href="#" onclick="goToByScroll('top'); return false;" class="top"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/jquery-migrate-1.2.1.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/superfish.js' %}"></script>
+    <script src="{% static 'js/tmStickUp.js' %}"></script>
+    <script src="{% static 'js/jquery.mobilemenu.js' %}"></script>
+<!--Coded by Katerina-->
+</body>
+</html>
