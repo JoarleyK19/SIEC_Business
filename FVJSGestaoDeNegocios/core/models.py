@@ -1,6 +1,12 @@
 from django.db import models
+import uuid
+from stdimage import StdImageField
 
-# from stdimage import StdImageField
+
+def get_file_path(__instance, filename):
+    ext = filename.split('.')[1]
+    filename = f'{uuid.uuid4()}.{ext}'
+    return filename
 
 
 class Base(models.Model):
@@ -13,16 +19,26 @@ class Base(models.Model):
 
 
 class Servico(Base):
-    servico = models.CharField('Serviço', max_length=100)
+    service = models.CharField('Serviço', max_length=100)
     descricao = models.TextField('Descrição', max_length=200)
-    imagem = models.ImageField(upload_to='service')
+    imagem = StdImageField('Imagem', upload_to=get_file_path, variations={'thumb': {'width': 480, 'height': 480, 'crop': True}})
 
     class Meta:
         verbose_name = 'Serviço'
         verbose_name_plural = 'Serviços'
 
+
+class ServicoAdicionais(Base):
+    serviceAd = models.CharField('Serviço', max_length=100)
+    descricaoAd = models.TextField('Descrição', max_length=200)
+    imagemAd = StdImageField('Imagem', upload_to=get_file_path, variations={'thumb': {'width': 480, 'height': 480, 'crop': True}})
+
+    class Meta:
+        verbose_name = 'Serviço Adicional'
+        verbose_name_plural = 'Serviços Adicionais'
+
     def __str__(self):
-        return self.servico
+        return self.serviceAd
 
 
 # class Cargo(Base):

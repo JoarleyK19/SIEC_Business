@@ -25,58 +25,9 @@
     </head>
     <body id="top">
 <!--==============================header=================================-->
-<header>
-    <div id="stuck_container">
-        <div class="container">
-            <div class="row">
-                <div class="grid_12">
-                    <h1><a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt="nickton - Clerk of Works Services Company"></a> </h1>
-                    <nav>
-                        <ul class="sf-menu">
-                            <li class="current"><a href="{% url 'index' %}">Início</a></li>
-                            <li><a href="{% url 'sobrenos' %}">Sobre Nós</a>
-                                <ul>
-                                    <li><a href="#">A Empresa</a></li>
-                                    <li><a href="#">O Grupo</a>
-                                        <ul>
-                                            <li><a href="#">Missão</a></li>
-                                            <li><a href="#">Visão</a></li>
-                                        </ul>
-                                    </li>
-                                    <!--------- <li><a href="#">Politica de Qualidade</a></li> ------->
-                               </ul>
-                            </li>
-
-                            <li><a href="{% url 'service' %}">Serviços</a>
-                                <ul>
-                                    <li><a href="#">Consultoria</a></li>
-                                    <li><a href="#">Alteamento </a></li>
-                                    <ul>
-                                        <li><a href="#">Barragem de Contenção de Rejeitos</a></li>
-
-                                    </ul>
-                                    <li><a href="#">Captação</a></li>
-                                    <li><a href="#">Auditorias</a></li>
-                                    <li><a href="#">Segurança</a></li>
-                                    <li><a href="#">Todos</a></li>
-                                    <li><a href="#">Certificações</a>
-                                        <ul>
-                                            <li><a href="#">ISO 9001:2015</a></li>
-                                            <li><a href="#">ISO 14001:2014</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="{% url 'empresas' %}">Empresas Parceiras</a></li>
-
-                            <li><a href="{% url 'contato' %}">Contato</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+{% block content%}
+    {% include 'menu.html' %}
+{% endblock %}
 
 <!--=======content================================-->
 

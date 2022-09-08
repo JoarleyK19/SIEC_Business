@@ -2,6 +2,7 @@ from django.views.generic import TemplateView, FormView
 from django.urls import reverse_lazy
 from django.contrib import messages
 
+from .models import Servico, ServicoAdicionais
 from .form import ContatoForm
 
 
@@ -26,6 +27,12 @@ class FormsView(FormView):
 
 class ServiceView(TemplateView):
     template_name = 'service.html'
+
+    def get_context_data(self, **kwargs):
+        contex = super(ServiceView, self).get_context_data(**kwargs)
+        contex['service'] = Servico.objects.all()
+        contex['serviceAd'] = ServicoAdicionais.objects.all()
+        return contex
 
 
 class SobrenosView(TemplateView):

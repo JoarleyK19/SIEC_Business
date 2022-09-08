@@ -1,3 +1,4 @@
+{% load bootstrap5 %}
 {% load static %}
 <!DOCTYPE html>
     <html lang="pt-BR">
@@ -6,6 +7,7 @@
     <meta charset="utf-8">
     <meta name = "format-detection" content = "telephone=yes" />
     <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    {% bootstrap_css %}
     <link rel="stylesheet" href="{% static 'css/stuck.css' %}">
     <link rel="stylesheet" href="{% static 'css/camera.css' %}">
     <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
@@ -26,101 +28,10 @@
     </head>
     <body class="page-1" id="top">
 <!--==============================header=================================-->
-<header>
-    <div id="stuck_container">
-        <div class="container">
-            <div class="row">
-                <div class="grid_12">
-                    <div class="logonosso1"> <h1><a  href="{% url 'index' %}"><img id="logonosso" src="{% static 'images/Sem título14.png' %}" alt="FVJS Gestão "></a> </h1></div>
-                    <nav>
-                        <ul class="sf-menu">
-                            <li class="current"><a href="{% url 'index' %}">Início</a></li>
-                            <li><a href="{% url 'sobrenos' %}">Sobre Nós</a>
-                                <ul>
-                                    <li><a href="#">A Empresa</a></li>
-                                    <li><a href="#">O Grupo</a>
-                                        <ul>
-                                            <li><a href="#">Missão</a></li>
-                                            <li><a href="#">Visão</a></li>
-                                        </ul>
-                                    </li>
-                                    <!--------- <li><a href="#">Politica de Qualidade</a></li> ------->
-                               </ul>
-                            </li>
-                            
-                            <li><a href="{% url 'service' %}">Serviços</a>
-                                <ul>
-                                    <li><a href="#">Consultoria</a></li>
-                                    <li><a href="#">Alteamento </a></li>
-                                    <ul>
-                                        <li><a href="#">Barragem de Contenção de Rejeitos</a></li>
-             
-                                    </ul>
-                                    <li><a href="#">Captação</a></li>
-                                    <li><a href="#">Auditorias</a></li>
-                                    <li><a href="#">Segurança</a></li>
-                                    <li><a href="#">Todos</a></li>
-                                    <li><a href="#">Certificações</a>
-                                        <ul>
-                                            <li><a href="#">ISO 9001:2015</a></li>
-                                            <li><a href="#">ISO 14001:2014</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="{% url 'empresas' %}">Empresas Parceiras</a></li>
-                            
-                            <li><a href="{% url 'contato' %}">Contato</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="slider clearfix">
-        <div class="camera_wrap camera_azure_skin clearfix" id="camera_wrap_1">
-            <div data-src="{% static 'images/Nossalogo (3).jpeg' %}">
-                <div class="camera_caption fadeIn">
-                    <div class="container">
-                        <div class="slider-text row">
-                            Consultoria e Projetos  . <br> para a Mineração desde 2022  
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div data-src="{% static 'images/slide-1.jpg' %}">
-                <div class="camera_caption fadeIn">
-                    <div class="container">
-                        <div class="slider-text row">
-                            Oferecemos as melhores <br>soluções qualidade <br> e meio ambiente.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div data-src="{% static 'images/slide-3.jpg' %}">
-                <div class="camera_caption fadeIn">
-                    <div class="container">
-                        <div class="slider-text row">
-                            Oferecemos aconselhamento <br> imparcial e serviço de inspeção <br> de alta qualidade
-                        </div>
-                    </div>
-                </div>
-            </div>  
-            <div data-src="{% static 'images/slide-2.jpg' %}">
-                <div class="camera_caption fadeIn">
-                    <div class="container">
-                        <div class="slider-text row">
-                            Parceiros Qualificados e <br>Consolidados,  Consulte -nos
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-</header>
-
+{% block content%}
+    {% include 'menu.html' %}
+    {% include 'destaque.html' %}
+{% endblock %}
 <!--=======content================================-->
 
 <section class="content">
@@ -131,29 +42,27 @@
                     <h2>Sobre Nós</h2>
                 </div>
                 <div class="clearfix offer">
-                    <div class="grid_4 clearfix box-1">
+                    <div class="grid_4 clearfix box-1" style="padding:0px;">
                         <img src="{% static 'images/page-1_img-1.jpg' %}" alt="">
                         <div class="inside">
-                            <div class="title-1">FVJS Gestão</div>
-                            <div>O Grupo FVJC Gestão de Projetos, sociedade constituida em 2022, atende o mercado de projetos e consultoria nas áreas de barragem de rejeito geotecnia, hidrologia / hidráulica e geologia, principalmente voltados para a mineração. </div>
+                            <div class="title-1" style="font-size: 25px;">Pessoal</div>
+                            <div>Ser ético e transparente para nossos clientes, colaboradores.</div>
                             <a href="#" class="btn">Saiba Mais</a>
                         </div>
                     </div>
-                    <div class="grid_4 clearfix box-1">
+                    <div class="grid_4 clearfix box-1" style="padding:0px;">
                         <img src="{% static 'images/page-1_img-2.jpg' %}" alt="">
                         <div class="inside">
-                            <div class="title-1">Nos Somos</div>
-                            <div>O Grupo FVJC Gestão de Projetos compreende quatro (04) estudantes/visionários atuantes no mercado de Consultoria de Barragens de Rejeitos para a Mineração desde 2022. Proporciona atendimento personalizado com o intuito de oferecer as melhores soluções de engenharia, Tecnologia de Informação, produtividade, qualidade, meio ambiente e segurança aos seus clientes. </div>
+                            <div class="title-1" style="font-size: 25px;">Controle</div>
+                            <div>Garantir a qualidade dos serviços prestados e a sustentabilidade.</div>
                             <a href="#" class="btn">Saiba Mais</a>
                         </div>
                     </div>
-                    <div class="grid_4 clearfix box-1">
+                    <div class="grid_4 clearfix box-1" style="padding:0px;">
                         <img src="{% static 'images/page-1_img-3.jpg' %}" alt="">
                         <div class="inside">
-                            <div class="title-1">Missão</div>
-                            <div><strong>Missão</strong> Ser um modelo de referência no atendimento às soluções de Barragens de Rejeitos e procedimentos dentro da nossa organização.
-                                <p></p><strong>Visão:</strong> Ser a melhor empresa de Consultoria de Barragens de Rejeitos para mineração  na avaliação dos seus clientes e colaboradores.
-                                 </div>
+                            <div class="title-1" style="font-size: 25px;">Qualidade</div>
+                            <div>A FVJS Gestão de Negócios busca a satisfação dos seus clientes.</div>
                             <a href="#" class="btn">Saiba Mais</a>
                         </div>
                     </div>
@@ -315,6 +224,7 @@
 
     <script src="{% static 'js/tmStickUp.js' %}"></script>
     <script src="{% static 'js/owl.carousel.js' %}"></script>
+    {% bootstrap_javascript %}
 
     <script>
         $(window).load(function(){

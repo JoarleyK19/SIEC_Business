@@ -828,16 +828,6 @@ dl.address dd span {
   }
 }
 /*==================================RESPONSIVE LAYOUTS===============================================*/
-#logonosso {
-  float: left;
-  align-items: left;
-}
-
-.logonosso1 {
-  float: left;
-  align-items: left;
-}
-
 @media (min-width: 1220px) {
   .container {
     padding: 0;

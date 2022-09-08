@@ -635,22 +635,22 @@ dl.address dd span {
   margin-top: 7px;
   margin-bottom: 25px;
 }
-#contato {
+#contact-form {
   position: relative;
   margin-top: 9px;
 }
-#contato label {
+#contact-form label {
   display: inline-block;
   position: relative;
   min-height: 60px;
   width: 30%;
 }
-#contato label.email,
-#contato label.phone {
+#contact-form label.email,
+#contact-form label.phone {
   margin-left: 34px;
 }
-#contato label input,
-#contato label textarea {
+#contact-form label input,
+#contact-form label textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -668,13 +668,13 @@ dl.address dd span {
   border: 1px solid #737373;
   -webkit-appearance: none;
 }
-#contato label input {
+#contact-form label input {
   height: 41px;
   padding: 11px 7px 10px 16px;
   outline: none;
   width: 100%;
 }
-#contato label textarea {
+#contact-form label textarea {
   height: 258px;
   overflow: auto;
   width: 100%;
@@ -682,21 +682,18 @@ dl.address dd span {
   margin: 0px;
   resize: none;
 }
-#contato span {
+#contact-form span {
   display: block;
 }
 .form_buttons a {
   margin-top: 34px;
   margin-right: 10px;
 }
-#contato .form_buttons span {
+#contact-form .form_buttons span {
   padding-top: 40px;
   display: inline-block;
 }
-
-
-
-#contato ._placeholder {
+#contact-form ._placeholder {
   position: absolute;
   /*!*/
   left: 0;
@@ -718,17 +715,17 @@ dl.address dd span {
   -o-box-sizing: border-box;
   box-sizing: border-box;
 }
-#contato ._placeholder.focused {
+#contact-form ._placeholder.focused {
   opacity: .4;
 }
-#contato ._placeholder.hidden {
+#contact-form ._placeholder.hidden {
   display: none;
 }
-#contato .message {
+#contact-form .message {
   width: 100%;
 }
-#contato .error-message,
-#contato .empty-message {
+#contact-form .error-message,
+#contact-form .empty-message {
   height: 0;
   overflow: hidden;
   font: 10px/20px Arial;
@@ -740,15 +737,15 @@ dl.address dd span {
   right: 10px;
   top: 0;
 }
-#contato .message .error-message,
-#contato .message .empty-message {
+#contact-form .message .error-message,
+#contact-form .message .empty-message {
   right: 3px;
 }
-#contato .invalid .error-message,
-#contato .empty .empty-message {
+#contact-form .invalid .error-message,
+#contact-form .empty .empty-message {
   height: 20px;
 }
-#contato .success-message {
+#contact-form .success-message {
   position: absolute;
   overflow: hidden;
   height: 0;
@@ -772,7 +769,7 @@ dl.address dd span {
   color: #686868;
   background: #f7f7f7;
 }
-#contato.success .success-message {
+#contact-form.success .success-message {
   padding: 160px 0;
   border: 1px solid #737373;
   -webkit-transition: all 0.7s linear;
@@ -782,45 +779,45 @@ dl.address dd span {
 }
 /*--- contact_form end------*/
 @media only screen and (max-width: 1220px) {
-  #contato label {
+  #contact-form label {
     width: 100%;
     margin-left: 0 !important;
   }
 }
 @media only screen and (max-width: 995px) {
-  #contato label {
+  #contact-form label {
     display: block;
     width: 100%;
   }
   .map_wrapper .address span {
     width: 80px;
   }
-  #contato label textarea {
+  #contact-form label textarea {
     width: 100%;
   }
-  #contato fieldset.fleft {
+  #contact-form fieldset.fleft {
     width: 100%;
   }
-  #contato fieldset.fright {
+  #contact-form fieldset.fright {
     width: 100%;
   }
   #map_canvas {
     width: 100%;
   }
-  #contato .error-message,
-  #contato .empty-message {
+  #contact-form .error-message,
+  #contact-form .empty-message {
     right: 3px;
   }
 }
 @media only screen and (max-width: 767px) {
-  #contato .success {
+  #contact-form .success {
     left: 0;
     right: 0;
   }
-  #contato label textarea {
+  #contact-form label textarea {
     height: 200px;
   }
-  #contato label.message ._placeholder {
+  #contact-form label.message ._placeholder {
     height: 200px;
   }
   #map_canvas {
@@ -831,16 +828,6 @@ dl.address dd span {
   }
 }
 /*==================================RESPONSIVE LAYOUTS===============================================*/
-#logonosso {
-  float: left;
-  align-items: left;
-}
-
-.logonosso1 {
-  float: left;
-  align-items: left;
-}
-
 @media (min-width: 1220px) {
   .container {
     padding: 0;

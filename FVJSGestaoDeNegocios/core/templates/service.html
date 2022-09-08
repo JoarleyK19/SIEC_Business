@@ -27,58 +27,9 @@
     </head>
     <body id="top">
 <!--==============================header=================================-->
-<header>
-    <div id="stuck_container">
-        <div class="container">
-            <div class="row">
-                <div class="grid_12">
-                    <h1><a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt="nickton - Clerk of Works Services Company"></a> </h1>
-                    <nav>
-                        <ul class="sf-menu">
-                            <li class="current"><a href="{% url 'index' %}">Início</a></li>
-                            <li><a href="{% url 'sobrenos' %}">Sobre Nós</a>
-                                <ul>
-                                    <li><a href="#">A Empresa</a></li>
-                                    <li><a href="#">O Grupo</a>
-                                        <ul>
-                                            <li><a href="#">Missão</a></li>
-                                            <li><a href="#">Visão</a></li>
-                                        </ul>
-                                    </li>
-                                    <!--------- <li><a href="#">Politica de Qualidade</a></li> ------->
-                               </ul>
-                            </li>
-
-                            <li><a href="{% url 'service' %}">Serviços</a>
-                                <ul>
-                                    <li><a href="#">Consultoria</a></li>
-                                    <li><a href="#">Alteamento </a></li>
-                                    <ul>
-                                        <li><a href="#">Barragem de Contenção de Rejeitos</a></li>
-
-                                    </ul>
-                                    <li><a href="#">Captação</a></li>
-                                    <li><a href="#">Auditorias</a></li>
-                                    <li><a href="#">Segurança</a></li>
-                                    <li><a href="#">Todos</a></li>
-                                    <li><a href="#">Certificações</a>
-                                        <ul>
-                                            <li><a href="#">ISO 9001:2015</a></li>
-                                            <li><a href="#">ISO 14001:2014</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="{% url 'empresas' %}">Empresas Parceiras</a></li>
-
-                            <li><a href="{% url 'contato' %}">Contato</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+{% block content%}
+    {% include 'menu.html' %}
+{% endblock %}
 
 <!--=======content================================-->
 
@@ -86,35 +37,25 @@
     <div class="container">
         <div class="row">
             <div class="grid_12">
-                <h2>Main Services</h2>
+                <h2>Principais Serviços</h2>
             </div>
+            {% for s in service %}
             <div class="clearfix services">
                 <div class="grid_4">
-                    <a href="{% static 'images/page-3_img-1-b.jpg' %}" class="magnifier"><img src="{% static 'images/page-3_img-1.jpg' %}" alt=""></a>
-                    <p class="text-1"><a href="#">Lorem ipsum dolor sit amet, consectetuer adip iscing elit, sed dia nonummy ismod.</a></p>
-                    <div>Consectetur adipisicing elit, sed do eiusmod tempor incidi dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</div>
-                    <a href="#" class="btn">more</a>
-                </div>
-                <div class="grid_4">
-                    <a href="{% static 'images/page-3_img-2-b.jpg' %}" class="magnifier"><img src="{% static 'images/page-3_img-2.jpg' %}" alt=""></a>
-                    <p class="text-1"><a href="#">Nonummy nibh euismod tincidut laoreet dolore magna aliquam Cum socis. </a></p>
-                    <div>At vero eos et accusamus et iusto odio. Dignissimos ducim us qui blanditiis praesentium voluptatum deleniti atque orru pti quos dolores et quas.consectetur adipisicing elit.</div>
-                    <a href="#" class="btn">more</a>
-                </div>
-                <div class="grid_4">
-                    <a href="{% static 'images/page-3_img-3-b.jpg' %}" class="magnifier"><img src="{% static 'images/page-3_img-3.jpg' %}" alt=""></a>
-                    <p class="text-1"><a href="#">Vestibulum iaculis laa est. Pin dien tum velit. Fusce eonsequat ante Lorem.</a></p>
-                    <div>Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi archi tecto beatae vitae dicta sunt.consectetur adipisicing elit, eiusmod.</div>
+                    <a href="{{ s.imagem.thumb.url }}" class="magnifier"><img src="{{ s.imagem.thumb.url }}" alt=""></a>
+                    <p class="text-1"><a href="#">{{ s.service }}</a></p>
+                    <div>{{ s.descricao }}</div>
                     <a href="#" class="btn">more</a>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
     <div class="bg-2 bot-1">
         <div class="container">
             <div class="row">
                 <div class="grid_12">
-                    <h2>How We Work</h2>
+                    <h2>Como Trabalhamos</h2>
                 </div>
                 <div class="clearfix about_work">
                     <div class="grid_4 clearfix">
@@ -151,25 +92,18 @@
     <div class="container">
         <div class="row">
             <div class="grid_12">
-                <h2>Additional Services</h2>
+                <h2>Serviços Adicionais</h2>
             </div>
             <div class="clearfix add-serv">
+                {% for sa in serviceAd %}
                 <div class="grid_6">
-                    <img src="{% static 'images/page-3_img-4.jpg' %}" alt="" class="img-ind w1">
+                    <img src="{{ sa.imagemAd.thumb.url }}" alt="" class="img-ind w1">
                     <div>
-                        <p class="text-1"><a href="#">Sed placerat pretium ipsum, eget ornare unt ut Nam feugiat Lorem ipsum dolor.</a></p>
-                        <p>Consectetur adipisicing elit, sed do eiusmod tempor incidi dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
-                        <div>Quis ostrud exercitation ullamco. Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor. In reprehenderit.</div>
+                        <p class="text-1"><a href="{{ sa.serviceAd }}">{{ sa.serviceAd }}</a></p>
+                        <p>{{ sa.descricaoAd }}</p>
                     </div>
                 </div>
-                <div class="grid_6">
-                    <img src="{% static 'images/page-3_img-5.jpg' %}" alt="" class="img-ind w1">
-                    <div>
-                        <p class="text-1"><a href="#">Suscipit varius sociis natoque penatibus et magnis dis partur ient montes, nascetur.</a></p>
-                        <p>Sed do eiusmod tempor incidi dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Quis ostrud exercitation ullamco. Laboris nisi ut aliquip ex ea commodo. </p>
-                        <div>Consequat. Duis aute irure dolor. In reprehe nderit in voluptate velit esse cillum dolore.</div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
