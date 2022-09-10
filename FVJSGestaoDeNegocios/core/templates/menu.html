@@ -1,17 +1,17 @@
 {% load static %}
-<header style="padding:1%;">
+<header>
     <div id="stuck_container">
         <div class="container">
             <div class="row">
-                <div class="grid_12">
-                    <div class="logonosso1">
+                <div class="grid_12" style="width:100%; display:contents;">
+                    <div class="logonosso1" style="width:40%;">
                         <span>
                             <a href="{% url 'index' %}">
                                 <img  id="logonosso" alt="FVJS Gestão" src="{% static 'images/Sem título14.png' %}" >
                             </a>
                         </span>
                     </div>
-                    <nav>
+                    <nav style="width:60%;">
                         <ul class="sf-menu">
                             <li class="current">
                                 <a href="{% url 'index' %}">Início</a>
@@ -28,7 +28,7 @@
 <!--                                    &lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45; <li><a href="#">Politica de Qualidade</a></li> -&#45;&#45;&#45;&#45;&ndash;&gt;-->
 <!--                                </ul>-->
 <!--                            </li>-->
-                            <li><a href="index-1.html">Sobre</a>
+                            <li><a href="{% url 'sobrenos' %}">Sobre</a>
                                 <ul>
                                     <li><a href="#">A Empresa</a></li>
                                     <li><a href="#">O Grupo</a>

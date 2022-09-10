@@ -2,12 +2,17 @@ from django.views.generic import TemplateView, FormView
 from django.urls import reverse_lazy
 from django.contrib import messages
 
-from .models import Servico, ServicoAdicionais
+from .models import Servico, ServicoAdicionais, Funcionario
 from .form import ContatoForm
 
 
 class IndexView(TemplateView):
     template_name = 'index.html'
+
+    def get_context_data(self, **kwargs):
+        contex = super(IndexView, self).get_context_data(**kwargs)
+        contex['funcionarios'] = Funcionario.objects.order_by('nome').all()
+        return contex
 
 
 class FormsView(FormView):
