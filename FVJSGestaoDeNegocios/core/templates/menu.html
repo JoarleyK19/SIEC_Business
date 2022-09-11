@@ -1,87 +1,75 @@
 {% load static %}
-<header>
-    <div id="stuck_container">
-        <div class="container">
-            <div class="row">
-                <div class="grid_12" style="width:100%; display:contents;">
-                    <div class="logonosso1" style="width:40%;">
-                        <span>
-                            <a href="{% url 'index' %}">
-                                <img  id="logonosso" alt="FVJS Gestão" src="{% static 'images/Sem título14.png' %}" >
-                            </a>
-                        </span>
-                    </div>
-                    <nav style="width:60%;">
-                        <ul class="sf-menu">
-                            <li class="current">
-                                <a href="{% url 'index' %}">Início</a>
-                            </li>
-<!--                            <li class="current"><a href="{% url 'sobrenos' %}">Sobre Nós</a>-->
-<!--                                <ul>-->
-<!--                                    <li style="padding:5px; margin: bottom 10px;"><a href="#">A Empresa</a></li>-->
-<!--                                    <li style="padding:5px;"><a href="#">O Grupo</a>-->
-<!--                                        <ul>-->
-<!--                                            <li class="current"><a href="#">Missão</a></li>-->
-<!--                                            <li class="current"><a href="#">Visão</a></li>-->
-<!--                                        </ul>-->
-<!--                                    </li>-->
-<!--                                    &lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45; <li><a href="#">Politica de Qualidade</a></li> -&#45;&#45;&#45;&#45;&ndash;&gt;-->
-<!--                                </ul>-->
-<!--                            </li>-->
-                            <li><a href="{% url 'sobrenos' %}">Sobre</a>
-                                <ul>
-                                    <li><a href="#">A Empresa</a></li>
-                                    <li><a href="#">O Grupo</a>
-                                        <ul>
-                                            <li><a href="#">Missão</a></li>
-                                            <li><a href="#">Visão</a></li>
-                                        </ul>
+            <div id="stuck_container">
+                <div class="container">
+                    <div class="row">
+                        <div class="logonosso1" style="width:40%;">
+                            <span>
+                                <a href="{% url 'index' %}">
+                                    <img  id="logonosso" alt="FVJS Gestão" src="{% static 'images/Sem título14.png' %}" >
+                                </a>
+                            </span>
+                        </div>
+                        <div class="grid_12" style="display:contents; width:100%;">
+                            <nav class="navbar">
+                                <ul class="sf-menu">
+                                    <li class="current">
+                                        <a href="{% url 'index' %}">Início</a>
                                     </li>
-                               </ul>
-                            </li>
 
-                            <li><a href="{% url 'service' %}">Serviços</a>
-                                <ul>
-                                    <li>
-                                        <a href="#">Consultoria</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Alteamento </a>
-                                    </li>
-                                    <ul>
-                                        <li>
-                                            <a href="#">Barragem de Contenção de Rejeitos</a>
-                                        </li>
-                                    </ul>
-                                    <li>
-                                        <a href="#">Captação</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Auditorias</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Segurança</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Todos</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Certificações</a>
+                                    <li class="dropdown">
+                                        <a href="{% url 'sobrenos' %}">Sobre</a>
                                         <ul>
-                                            <li><a href="#">ISO 9001:2015</a></li>
-                                            <li><a href="#">ISO 14001:2014</a></li>
+                                            <li><a href="#">A Empresa</a>
+                                            </li>
+                                            <li><a href="#">O Grupo</a>
+                                                <ul>
+                                                    <li><a href="#">Missão</a></li>
+                                                    <li><a href="#">Visão</a></li>
+                                                </ul>
+                                            </li>
+                                       </ul>
+                                    </li>
+
+                                    <li><a href="{% url 'service' %}">Serviços</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Consultoria</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Alteamento </a>
+                                            </li>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Barragem de Contenção de Rejeitos</a>
+                                                </li>
+                                            </ul>
+                                            <li>
+                                                <a href="#">Captação</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Auditorias</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Segurança</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Todos</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Certificações</a>
+                                                <ul>
+                                                    <li><a href="#">ISO 9001:2015</a></li>
+                                                    <li><a href="#">ISO 14001:2014</a></li>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </li>
+                                    <li><a href="{% url 'empresas' %}">Empresas Parceiras</a></li>
+
+                                    <li><a href="{% url 'contato' %}">Contato</a></li>
                                 </ul>
-                            </li>
-                            <li><a href="{% url 'empresas' %}">Empresas Parceiras</a></li>
-
-                            <li><a href="{% url 'contato' %}">Contato</a></li>
-                        </ul>
-                    </nav>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-</header>

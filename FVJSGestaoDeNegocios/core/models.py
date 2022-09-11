@@ -68,3 +68,15 @@ class Funcionario(Base):
 
     def __str__(self):
         return self.nome
+
+
+class EmpresasParceiras(Base):
+    empresa = models.CharField('Empresa', max_length=100)
+    imagem = StdImageField('Imagem', upload_to=get_file_path, variations={'thumb': {'width': 300, 'height': 300, 'crop': True}})
+
+    class Meta:
+        verbose_name = 'Empresa Parceia'
+        verbose_name_plural = 'Empresas Parceiras'
+
+    def __str__(self):
+        return self.empresa

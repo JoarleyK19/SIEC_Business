@@ -2,7 +2,7 @@ from django.views.generic import TemplateView, FormView
 from django.urls import reverse_lazy
 from django.contrib import messages
 
-from .models import Servico, ServicoAdicionais, Funcionario
+from .models import Servico, ServicoAdicionais, Funcionario, EmpresasParceiras
 from .form import ContatoForm
 
 
@@ -46,6 +46,11 @@ class SobrenosView(TemplateView):
 
 class EmpresasView(TemplateView):
     template_name = 'empresas.html'
+
+    def get_context_data(self, **kwargs):
+        contex = super(EmpresasView, self).get_context_data(**kwargs)
+        contex['empresas'] = EmpresasParceiras.objects.order_by('?').all()
+        return contex
 
 
 class PoliticasView(TemplateView):
