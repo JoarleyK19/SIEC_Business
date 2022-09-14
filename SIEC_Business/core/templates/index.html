@@ -1,0 +1,286 @@
+{% load bootstrap5 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>FVJS Gestão de Projetos</title>
+        <meta charset="utf-8">
+        <meta name = "format-detection" content = "telephone=yes" />
+        <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/stuck.css' %}">
+        <link rel="stylesheet" href="{% static 'css/camera.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/superfish.css' %}">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
+        <!-- Icon -->
+        <link rel="stylesheet" href="{% static 'fonts/line-icons.css' %}">
+        <!-- Owl carousel -->
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl.theme.css' %}">
+
+        <!-- Animate -->
+        <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+        <!-- Main Style -->
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <!-- Responsive Style -->
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+        <!--[if lt IE 9]>
+           <div style=' clear: both; text-align:center; position: relative;'>
+             <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+               <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+             </a>
+          </div>
+        <![endif]-->
+        <!--[if lt IE 9]>
+            <script src="{% static 'js/html5shiv.js' %}"></script>
+            <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+        <![endif]-->
+    </head>
+    <body class="page-1" id="top">
+        <!--==============================header=================================-->
+        <header>
+            {% block content %}
+                {% include 'menu.html' %}
+                {% include 'destaque.html' %}
+
+        </header>
+
+        <!--=======content================================-->
+
+        <!-- Team Section Start -->
+        <section id="team" class="section-padding bg-gray">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Conheça o nosso time</h2>
+                    <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-xs-12">
+                        {% for f in funcionarios %}
+                        <!-- Team Item Starts -->
+                        <div class="team-item wow fadeInRight" data-wow-delay="0.2s">
+                            <div class="team-img">
+                                <img class="img-fluid" src="{{ f.imagem.thumb.url }}" alt="{{ f.nome }}">
+                            </div>
+                            <div class="contetn">
+                                <div class="info-text">
+                                    <h3><a href="#">{{ f.nome }}</a></h3>
+                                    <p>{{ f.cargo }}</p>
+                                </div>
+                                <p>{{ f.bio }}</p>
+                                <ul class="social-icons">
+                                    <li><a href="{{ f.facebook }}" target="_blank" rel="noopener noreferrer"><i class="lni-facebook-filled" aria-hidden="true"></i></a></li>
+                                    <li><a href="{{ f.twitter }}" target="_blank" rel="noopener noreferrer"><i class="lni-twitter-filled" aria-hidden="true"></i></a></li>
+                                    <li><a href="{{ f.instagram }}" target="_blank" rel="noopener noreferrer"><i class="lni-instagram-filled" aria-hidden="true"></i></a></li>
+                                    <li><a href="{{ f.linkedin }}" target="_blank" rel="noopener noreferrer"><i class="lni-linkedin-filled" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Team Item Ends -->
+                {% endfor %}
+                </div>
+            </div>
+        </section>
+        <!-- Team Section End -->
+        <section class="content">
+            <div class="bg-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="grid_12">
+                            <h2>Atividades Principais</h2>
+                            <div>Somos especialistas na consultoria de barragens para todo tipo de rejeitos voltados às mineradoras: </div>
+                        <div class="clearfix">
+                            <div class="box-2 grid_3">
+                                <div class="img-circle"></div>
+                                <h2 class="fs-5">Alteamento de Barragens de Contenção de Rejeitos</h2>
+                                <div>.</div>
+                                <a href="#" class="link btn btn-info">Saiba Mais</a>
+                            </div>
+                            <div class="box-2 grid_3">
+                                <div class="img-circle"></div>
+                                <h2 class="fs-5">Barragem de Lixiviação e Flotação.</h2>
+                                <div>.</div>
+                                <a href="#" class="link btn btn-info">Saiba Mais</a>
+                            </div>
+                            <div class="box-2 grid_3">
+                                <div class="img-circle"></div>
+                                <h2 class="fs-5">Barragens para Acumulação/Captação de Água.</h2>
+                                <div>.</div>
+                                <a href="#" class="link btn btn-info">Saiba Mais</a>
+                            </div>
+                            <!--------------!<div class="box-2 grid_3">
+                                <div class="img-circle"></div>
+                                <h2>Auditoria<br>de Barragens</h2>
+                                <div>.</div>
+                                <a href="#" class="link">more</a>-!------------->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="grid_12">
+                        <h2 class="v1">Leis Ambientais - Certificações - Politica de Qualidade</h2>
+                    </div>
+                    <div class="clearfix statements">
+                        <div class="grid_4" style="width: 30%;">
+                            <img src="{% static 'images/page-1_img-8.jpg' %}" alt="" class="wrapper">
+                            <div class="text-3">Politica de Qualidade</div>
+                            <div>A FVJS Gestão de Negócios busca a satisfação dos seus clientes através do atendimentos dos requisitos aplicáveis, melhoria contínua de seus processos e a eficácia do sistema de gestão, respeitando as pessoas e o meio ambiente.. </div>
+                            <a href="#" class="btn">Saiba Mais</a>
+                        </div>
+                        <div class="grid_4" style="width: 30%;">
+                            <img src="{% static 'images/page-1_img-9.jpg' %}" alt="" class="wrapper">
+                            <div class="text-3">Certificações</div>
+                            <div>Certificações Internacionais de Especialistas do Corpo Docente e Graduandos em Engenharia Civil e Sistema de Informação da Faculdades Kennedy Belo Horizonte/MG - Brasil
+                                ISO 9001:2015  (no futuro)
+                                ISO 14001:2014 (no futuro)
+                                 </div>
+                            <a href="#" class="btn">Saiba Mais</a>
+                        </div>
+                        <div class="grid_4" style="width: 30%;">
+                            <img src="{% static 'images/page-1_img-10.jpg' %}" alt="" class="wrapper">
+                            <div class="text-3">Leis Ambientais</div>
+                            <div>Política Nacional de Segurança de Barragens - PNSB (lei nº 12.334/2010)
+                                Resolução ANM nº 13, de 8 de agosto de 2019
+                                Resolução Conjunta SEMAD/FEAM nº 2.833, de 26 de agosto de 2019.
+                                Portaria DNPM nº 70.389, em 17 de maio de 2017 de 2019
+                                </div>
+                            <a href="#" class="btn">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--           <div class="bg-3">-->
+<!--               <div class="container">-->
+<!--                    <div class="row">-->
+<!--                        <div class="grid_12">-->
+<!--                            <div id="owl" class="clearfix">-->
+<!--                                <a href="#" class="item">-->
+<!--                                    <img src="{% static 'images/logo-1.png' %}" alt="">-->
+<!--                                </a>-->
+<!--                                <a href="#" class="item">-->
+<!--                                    <img src="{% static 'images/logo-2.png' %}" alt="">-->
+<!--                                </a>-->
+<!--                                <a href="#" class="item">-->
+<!--                                    <img src="{% static 'images/logo-3.png' %}" alt="">-->
+<!--                                </a>-->
+<!--                                <a href="#" class="item">-->
+<!--                                    <img src="{% static 'images/logo-4.png' %}" alt="">-->
+<!--                                </a>-->
+<!--                                <a href="#" class="item">-->
+<!--                                    <img src="{% static 'images/logo-5.png' %}" alt="">-->
+<!--                                </a>-->
+<!--                                <a href="#" class="item">-->
+<!--                                    <img src="{% static 'images/logo-6.png' %}" alt="">-->
+<!--                                </a>-->
+<!--                                <a href="#" class="item">-->
+<!--                                    <img src="{% static 'images/logo-1.png' %}" alt="">-->
+<!--                                </a>-->
+<!--                                <a href="#" class="item">-->
+<!--                                    <img src="{% static 'images/logo-2.png' %}" alt="">-->
+<!--                                </a>-->
+<!--                                <a href="#" class="item">-->
+<!--                                    <img src="{% static 'images/logo-3.png' %}" alt="">-->
+<!--                                </a>-->
+<!--                                <a href="#" class="item">-->
+<!--                                    <img src="{% static 'images/logo-4.png' %}" alt="">-->
+<!--                                </a>-->
+<!--                                <a href="#" class="item">-->
+<!--                                    <img src="{% static 'images/logo-5.png' %}" alt="">-->
+<!--                                </a>-->
+<!--                                <a href="#" class="item">-->
+<!--                                    <img src="{% static 'images/logo-6.png' %}" alt="">-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--               </div>-->
+<!--           </div>-->
+            <div class="bg-3">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+                        <div class="col"><img src="{% static 'images/logo-1.png' %}" alt=""></div>
+                        <div class="col"><img src="{% static 'images/logo-2.png' %}" alt=""></div>
+                        <div class="col"><img src="{% static 'images/logo-3.png' %}" alt=""></div>
+                        <div class="col"><img src="{% static 'images/logo-4.png' %}" alt=""></div>
+                        <div class="col"><img src="{% static 'images/logo-5.png' %}" alt=""></div>
+                        <div class="col"><img src="{% static 'images/logo-6.png' %}" alt=""></div>
+                        <div class="col"><img src="{% static 'images/logo-1.png' %}" alt=""></div>
+                        <div class="col"><img src="{% static 'images/logo-2.png' %}" alt=""></div>
+                        <div class="col"><img src="{% static 'images/logo-3.png' %}" alt=""></div>
+                        <div class="col"><img src="{% static 'images/logo-4.png' %}" alt=""></div>
+                        <div class="col"><img src="{% static 'images/logo-5.png' %}" alt=""></div>
+                        <div class="col"><img src="{% static 'images/logo-6.png' %}" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    <!--=======footer=================================-->
+
+        {% include 'rodape.html' %}
+
+        <script src="{% static 'js/jquery.js' %}"></script>
+        <script src="{% static 'js/jquery-migrate-1.2.1.js' %}"></script>
+        <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+        <script src="{% static 'js/script.js' %}"></script>
+        <script src="{% static 'js/superfish.js' %}"></script>
+        <script src="{% static 'js/jquery.mobilemenu.js' %}"></script>
+        <script src="{% static 'js/camera.js' %}"></script>
+        <!--[if (gt IE 9)|!(IE)]><!-->
+            <script src="{% static 'js/jquery.mobile.customized.min.js' %}"></script>
+        <!--<![endif]-->
+
+        <script src="{% static 'js/tmStickUp.js' %}"></script>
+        <script src="{% static 'js/owl.carousel.js' %}"></script>
+        {% bootstrap_javascript %}
+
+    <!--    <script src="{% static 'js/jquery-min.js' %}"></script>-->
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'js/wow.js' %}"></script>
+        <script src="{% static 'js/jquery.nav.js' %}"></script>
+        <script src="{% static 'js/scrolling-nav.js' %}"></script>
+        <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+        <script src="{% static 'js/form-validator.min.js' %}"></script>
+        <script src="{% static 'js/contact-form-script.min.js' %}"></script>
+
+        <script>
+            $(window).load(function(){
+                jQuery('#camera_wrap_1').camera({
+                    height: '37.85%',
+                    playPause: false,
+                    time: 8000,
+                    transPeriod: 1000,
+                    fx: 'simpleFade',
+                    loader: 'none',
+                    minHeight:'150px',
+                    navigation: false,
+                    pagination: true,
+                });
+                var owl = $("#owl");
+                    owl.owlCarousel({
+                    items : 6, //10 items above 1000px browser width
+                    itemsDesktop : [995,4], //5 items between 1000px and 901px
+                    itemsDesktopSmall : [767, 2], // betweem 900px and 601px
+                    itemsTablet: [700, 2], //2 items between 600 and 0
+                    itemsMobile : [479, 1], // itemsMobile disabled - inherit from itemsTablet option
+                    navigation : true,
+                    pagination :  false
+                });
+            });
+        </script>
+        {% endblock %}
+    </body>
+</html>
