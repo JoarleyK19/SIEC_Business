@@ -1,3 +1,4 @@
+{% load bootstrap5 %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -6,6 +7,7 @@
         <meta charset="utf-8">
         <meta name="format-detection" content="telephone=no"/>
         <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+        {% bootstrap_css %}
         <link rel="stylesheet" href="{% static 'css/stuck.css' %}">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link rel="stylesheet" href="{% static 'css/superfish.css' %}">
@@ -51,7 +53,7 @@
         <!--=======content================================-->
 
         <section class="content">
-            <div class="container">
+            <div class="container" style="max-width:1200px;">
                 <div class="row block-1">
                     <div class="grid_4">
                         <h2>About Us</h2>
@@ -122,51 +124,50 @@
                 </div>
             </div>
             <div class="bg-2">
-                <div class="container">
-                    <div class="row">
-                        <div class="grid_12">
-                            <h2>Our Staff</h2>
+                <!-- Team Section Start -->
+                <section id="team" class="section-padding bg-gray">
+                    <div class="container" style="max-width:1200px;">
+                        <div class="grid_12" >
+                            <h2 style="padding: 0%; margin-left: -30px; margin-top: -10px;">Our Staff</h2>
                         </div>
-                        <div class="clearfix">
-                            <div class="grid_3 box-3 maxheight1">
-                                <img src="{% static 'images/page-2_img-2.jpg' %}" alt="" class="wrapper">
-                                <div class="inside">
-                                    <p class="text-1"><a href="#">Marta Healy</a></p>
-                                    <div>Consectetur adipisicing elit, sed do eiusmod tempor incidi dunt labore.</div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12 col-xs-12">
+                                {% for f in funcionarios %}
+                                <!-- Team Item Starts -->
+                                <div class="team-item wow fadeInRight" data-wow-delay="0.2s">
+                                    <div class="team-img">
+                                        <img class="img-fluid" src="{{ f.imagem.thumb.url }}" alt="{{ f.nome }}">
+                                    </div>
+                                    <div class="contetn">
+                                        <div class="info-text">
+                                            <h3><a href="#">{{ f.nome }}</a></h3>
+                                            <p>{{ f.cargo }}</p>
+                                        </div>
+                                        <p>{{ f.bio }}</p>
+                                        <ul class="social-icons">
+                                            <li><a href="{{ f.facebook }}" target="_blank" rel="noopener noreferrer"><i class="lni-facebook-filled" aria-hidden="true"></i></a></li>
+                                            <li><a href="{{ f.twitter }}" target="_blank" rel="noopener noreferrer"><i class="lni-twitter-filled" aria-hidden="true"></i></a></li>
+                                            <li><a href="{{ f.instagram }}" target="_blank" rel="noopener noreferrer"><i class="lni-instagram-filled" aria-hidden="true"></i></a></li>
+                                            <li><a href="{{ f.linkedin }}" target="_blank" rel="noopener noreferrer"><i class="lni-linkedin-filled" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="grid_3 box-3 maxheight1">
-                                <img src="{% static 'images/page-2_img-3.jpg' %}" alt="" class="wrapper">
-                                <div class="inside">
-                                    <p class="text-1"><a href="#">Bradley Grosh</a></p>
-                                    <div>In reprehenderit in voluptate velit esse cillum dolore eu fugiat morbi nunc.</div>
-                                </div>
-                            </div>
-                            <div class="grid_3 box-3 maxheight1">
-                                <img src="{% static 'images/page-2_img-4.jpg' %}" alt="" class="wrapper">
-                                <div class="inside">
-                                    <p class="text-1"><a href="#">Sam Kromstain</a></p>
-                                    <div>Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</div>
-                                </div>
-                            </div>
-                            <div class="grid_3 box-3 maxheight1">
-                                <img src="{% static 'images/page-2_img-5.jpg' %}" alt="" class="wrapper">
-                                <div class="inside">
-                                    <p class="text-1"><a href="#">Laura Stegner</a></p>
-                                    <div>Ut enim ad minim veniam, quis nostr ud exercitation ullamco aboris nisi.</div>
-                                </div>
-                            </div>
+                        <!-- Team Item Ends -->
+                        {% endfor %}
                         </div>
                     </div>
-                </div>
+                </section>
+                <!-- Team Section End -->
+
             </div>
-            <div class="container">
+            <div class="container" style="max-width:1200px;">
                 <div class="row">
                     <div class="grid_12">
                         <h2>Testimonials</h2>
                     </div>
                     <div class="testimonials clearfix">
-                        <div class="grid_4 test_inside clearfix">
+                        <div class="grid_4 test_inside clearfix" style="width:363px;">
                             <div class="img-circle v1"><i class="fa fa-comments"></i></div>
                             <div class="extra-wrap">
                                 <p class="text-5">“Nulla facilisi. Aenean nec eros. Vestibulum ante m primis in faucibus orci
@@ -176,7 +177,7 @@
                                 <div class="text-1"><a href="#">HELEN TOMPSON</a></div>
                             </div>
                         </div>
-                        <div class="grid_4 test_inside clearfix">
+                        <div class="grid_4 test_inside clearfix" style="width:363px;">
                             <div class="img-circle v1"><i class="fa fa-comments"></i></div>
                             <div class="extra-wrap">
                                 <p class="text-5">“Vestibulum iaculis lacinia est punerurn dictu melementum velit. Fusce euismod
@@ -186,7 +187,7 @@
                                 <div class="text-1"><a href="#">Jessica Priston</a></div>
                             </div>
                         </div>
-                        <div class="grid_4 test_inside clearfix">
+                        <div class="grid_4 test_inside clearfix" style="width:363px;">
                             <div class="img-circle v1"><i class="fa fa-comments"></i></div>
                             <div class="extra-wrap">
                                 <p class="text-5">“Lacinia est punerurn dictu melementum velit. Fusce euismod consequat ante.

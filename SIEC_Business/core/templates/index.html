@@ -51,51 +51,49 @@
         </header>
 
         <!--=======content================================-->
-
-        <!-- Team Section Start -->
-        <section id="team" class="section-padding bg-gray">
-            <div class="container">
-                <div class="section-header text-center">
-                    <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Conheça o nosso time</h2>
-                    <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 col-xs-12">
-                        {% for f in funcionarios %}
-                        <!-- Team Item Starts -->
-                        <div class="team-item wow fadeInRight" data-wow-delay="0.2s">
-                            <div class="team-img">
-                                <img class="img-fluid" src="{{ f.imagem.thumb.url }}" alt="{{ f.nome }}">
-                            </div>
-                            <div class="contetn">
-                                <div class="info-text">
-                                    <h3><a href="#">{{ f.nome }}</a></h3>
-                                    <p>{{ f.cargo }}</p>
+        <section class="content">
+            <div class="bg-1">
+                <div class="container" style="max-width:1230px;">
+                    <div class="row">
+                        <div class="grid_12">
+                            <h2>Our differential</h2>
+                        </div>
+                        <div class="clearfix offer">
+                            <div class="grid_4 clearfix box-1">
+                                <img src="{% static 'images/page-1_img-1.jpg' %}" alt="">
+                                <div class="inside">
+                                    <div class="title-1" style="padding-top: 37px">Training</div>
+                                    <div><p class="ext-capitalize fs-6" style="padding-bottom: 3px">Qualification for the training of new professionals.</p></div>
+                                    <a href="#" class="btn">more</a>
                                 </div>
-                                <p>{{ f.bio }}</p>
-                                <ul class="social-icons">
-                                    <li><a href="{{ f.facebook }}" target="_blank" rel="noopener noreferrer"><i class="lni-facebook-filled" aria-hidden="true"></i></a></li>
-                                    <li><a href="{{ f.twitter }}" target="_blank" rel="noopener noreferrer"><i class="lni-twitter-filled" aria-hidden="true"></i></a></li>
-                                    <li><a href="{{ f.instagram }}" target="_blank" rel="noopener noreferrer"><i class="lni-instagram-filled" aria-hidden="true"></i></a></li>
-                                    <li><a href="{{ f.linkedin }}" target="_blank" rel="noopener noreferrer"><i class="lni-linkedin-filled" aria-hidden="true"></i></a></li>
-                                </ul>
+                            </div>
+                            <div class="grid_4 clearfix box-1">
+                                <img src="{% static 'images/page-1_img-2.jpg' %}" alt="">
+                                <div class="inside">
+                                    <div class="title-1" style="padding-top: 37px">Control</div>
+                                    <div><p class="ext-capitalize fs-6" style="padding-bottom: 3px">Use of new technologies for ore recovery is to reduce tailings.</p></div>
+                                    <a href="#" class="btn">more</a>
+                                </div>
+                            </div>
+                            <div class="grid_4 clearfix box-1">
+                                <img src="{% static 'images/page-1_img-3.jpg' %}" alt="">
+                                <div class="inside">
+                                    <div class="title-1" style="padding-top: 37px">Security</div>
+                                    <div><p class="ext-capitalize fs-6" style="padding-bottom: 3px">A safe working environment ensures a healthy worker.</p></div>
+                                    <a href="#" class="btn">more</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                <!-- Team Item Ends -->
-                {% endfor %}
                 </div>
             </div>
-        </section>
-        <!-- Team Section End -->
-        <section class="content">
             <div class="bg-2">
-                <div class="container">
+                <div class="container" style="max-width:1230px;">
                     <div class="row">
                         <div class="grid_12">
                             <h2>Atividades Principais</h2>
                             <div>Somos especialistas na consultoria de barragens para todo tipo de rejeitos voltados às mineradoras: </div>
-                        <div class="clearfix">
+                        <div class="clearfix" style="padding-left: 10%;">
                             <div class="box-2 grid_3">
                                 <div class="img-circle"></div>
                                 <h2 class="fs-5">Alteamento de Barragens de Contenção de Rejeitos</h2>
@@ -124,7 +122,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container" style="max-width:1230px;">
                 <div class="row">
                     <div class="grid_12">
                         <h2 class="v1">Leis Ambientais - Certificações - Politica de Qualidade</h2>
@@ -205,7 +203,7 @@
 <!--               </div>-->
 <!--           </div>-->
             <div class="bg-3">
-                <div class="container">
+                <div class="container" style="max-width:1230px;">
                     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
                         <div class="col"><img src="{% static 'images/logo-1.png' %}" alt=""></div>
                         <div class="col"><img src="{% static 'images/logo-2.png' %}" alt=""></div>

@@ -802,7 +802,8 @@ hr {
 
 .team-item .contetn {
   padding: 15px 50px;
-  height: 200px;
+  height: 100px;
+  width:50%;
 }
 
 .team-item .social-icons {

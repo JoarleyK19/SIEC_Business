@@ -9,11 +9,6 @@ from .form import ContatoForm
 class IndexView(TemplateView):
     template_name = 'index.html'
 
-    def get_context_data(self, **kwargs):
-        contex = super(IndexView, self).get_context_data(**kwargs)
-        contex['funcionarios'] = Funcionario.objects.order_by('nome').all()
-        return contex
-
 
 class FormsView(FormView):
     template_name = 'contato.html'
@@ -42,6 +37,11 @@ class ServiceView(TemplateView):
 
 class SobrenosView(TemplateView):
     template_name = 'sobrenos.html'
+
+    def get_context_data(self, **kwargs):
+        contex = super(SobrenosView, self).get_context_data(**kwargs)
+        contex['funcionarios'] = Funcionario.objects.order_by('nome').all()
+        return contex
 
 
 class EmpresasView(TemplateView):
