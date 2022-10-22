@@ -5,11 +5,7 @@
                         <div class="logonosso1" style="width:40%;">
                             <span>
                                 <a href="{% url 'index' %}">
-<<<<<<< HEAD
-                                    <img  id="logonosso" alt="FVJS Gestão" src="{% static 'images/logoNovaSemFundo.png' %}" >
-=======
                                     <img  id="logonosso" alt="FVJS Gestão" src="{% static 'images/logoSugestao4.png' %}" >
->>>>>>> FVJS001
                                 </a>
                             </span>
                         </div>
@@ -23,9 +19,9 @@
                                     <li class="dropdown">
                                         <a href="{% url 'sobrenos' %}">Sobre</a>
                                         <ul>
-                                            <li><a href="#">A Empresa</a>
+                                            <li><a href="{% url 'sobrenos' %}#aboutUs">A Empresa</a>
                                             </li>
-                                            <li><a href="#">O Grupo</a>
+                                            <li><a href="{% url 'sobrenos' %}#aboutUs">O Grupo</a>
                                                 <ul>
                                                     <li><a href="#">Missão</a></li>
                                                     <li><a href="#">Visão</a></li>
