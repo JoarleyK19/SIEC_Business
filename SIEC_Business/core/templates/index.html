@@ -156,6 +156,24 @@
                     </div>
                 </div>
             </div>
+
+            <div class="container" style="max-width:1230px;">
+                <div class="row">
+                    <div class="grid_12">
+                        <h2 class="v1">Notícias</h2>
+                    </div>
+                    {% for n in noticia %}
+                        <div class="clearfix statements">
+                            <div class="grid_4" style="width: 30%;">
+                                <img src="{{ n.imagem.thumb.url }}" alt="{{ n.noticia }}" class="wrapper">
+                                <div class="text-3">{{ n.noticia }}</div>
+                                <div>{{ n.descricao }}</div>
+                                <a href="{{ n.link }}" class="btn">Saiba Mais</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
 <!--           <div class="bg-3">-->
 <!--               <div class="container">-->
 <!--                    <div class="row">-->

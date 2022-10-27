@@ -80,3 +80,17 @@ class EmpresasParceiras(Base):
 
     def __str__(self):
         return self.empresa
+
+
+class Noticias(Base):
+    manchete = models.CharField('Manchete', max_length=100)
+    descricao = models.TextField('Descrição', max_length=200)
+    imagem = StdImageField('Imagem', upload_to=get_file_path, variations={'thumb': {'width': 300, 'height': 300, 'crop': True}})
+    link = models.CharField('Link', max_length=300)
+
+    class Meta:
+        verbose_name = 'Manchete'
+        verbose_name_plural = 'Manchetes'
+
+    def __str__(self):
+        return self.manchete
