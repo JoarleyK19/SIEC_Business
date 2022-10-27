@@ -30,4 +30,4 @@ class EmpresaParceiraAdmin(admin.ModelAdmin):
 
 @admin.register(Noticias)
 class NoticiasAdmin(admin.ModelAdmin):
-    list_display = ('manchete', 'descricao', 'link', 'ativo', 'modificado')
+    list_display = ('manchete', 'descricao', 'imagem', 'link', 'ativo', 'modificado')
