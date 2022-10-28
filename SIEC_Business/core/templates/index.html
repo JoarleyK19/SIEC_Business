@@ -156,24 +156,25 @@
                     </div>
                 </div>
             </div>
-
-            <div class="container" style="max-width:1230px;">
-                <div class="row">
-                    <div class="grid_12">
-                        <h2 class="v1">Notícias</h2>
-                    </div>
-                    {% for n in manchete %}
-                        <div class="clearfix statements">
-                            <div class="grid_4" style="width: 30%;">
-                                <img src="{{ n.imagem.thumb.url }}" alt="{{ n.noticia }}" class="wrapper">
-                                <div class="text-3">{{ n.noticia }}</div>
-                                <div>{{ n.descricao }}</div>
-                                <a href="{{ n.link }}" class="btn">Saiba Mais</a>
-                            </div>
+            {% if manchete %}
+                <div class="container" style="max-width:1230px;">
+                    <div class="row">
+                        <div class="grid_12">
+                            <h2 class="v1">Notícias</h2>
                         </div>
-                    {% endfor %}
+                        {% for n in manchete %}
+                            <div class="clearfix statements">
+                                <div class="grid_4" style="width: 30%;">
+                                    <img src="{{ n.imagem.thumb.url }}" alt="{{ n.noticia }}" class="wrapper">
+                                    <div class="text-3">{{ n.noticia }}</div>
+                                    <div>{{ n.descricao }}</div>
+                                    <a href="{{ n.link }}" class="btn" target="_blank" rel="noreferrer nofollow noopener">Saiba Mais</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
                 </div>
-            </div>
+            {% endif %}
 <!--           <div class="bg-3">-->
 <!--               <div class="container">-->
 <!--                    <div class="row">-->

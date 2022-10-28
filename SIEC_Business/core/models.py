@@ -94,3 +94,21 @@ class Noticias(Base):
 
     def __str__(self):
         return self.manchete
+
+class Testemunhos(Base):
+    ICONE_CHOICES = (
+        ('fa-comments', 'Messege'),
+    )
+    depoimento = models.TextField('Depoimento', max_length=300)
+    nome = models.CharField('Nome', max_length=100)
+    icone = models.CharField('Icone', max_length=12, choices=ICONE_CHOICES)
+
+    class Meta:
+        verbose_name = 'Depoimento'
+        verbose_name_plural = 'Depoimentos'
+
+    def __str__(self):
+        return self.depoimento
+
+
+        

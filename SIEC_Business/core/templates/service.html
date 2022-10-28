@@ -49,23 +49,25 @@
             <!--=======content================================-->
 
             <section class="content">
-                <div class="container">
-                    <div class="row">
-                        <div class="grid_12">
-                            <h2>Principais Serviços</h2>
-                        </div>
-                        {% for s in service %}
-                        <div class="clearfix services">
-                            <div class="grid_4" style="width:250px;">
-                                <a href="{{ s.imagem.thumb.url }}" class="magnifier"><img src="{{ s.imagem.thumb.url }}" alt=""></a>
-                                <p class="text-1"><a href="#">{{ s.service }}</a></p>
-                                <div>{{ s.descricao }}</div>
-                                <a href="#" class="btn">more</a>
+                {% if service %}
+                    <div class="container">
+                        <div class="row">
+                            <div class="grid_12">
+                                <h2>Principais Serviços</h2>
                             </div>
+                            {% for s in service %}
+                            <div class="clearfix services">
+                                <div class="grid_4" style="width:250px;">
+                                    <a href="{{ s.imagem.thumb.url }}" class="magnifier"><img src="{{ s.imagem.thumb.url }}" alt=""></a>
+                                    <p class="text-1"><a href="#">{{ s.service }}</a></p>
+                                    <div>{{ s.descricao }}</div>
+                                    <a href="#" class="btn">more</a>
+                                </div>
+                            </div>
+                            {% endfor %}
                         </div>
-                        {% endfor %}
                     </div>
-                </div>
+                {% endif %}
                 <div class="bg-2 bot-1">
                     <div class="container">
                         <div class="row">
@@ -105,22 +107,24 @@
                     </div>
                 </div>
                 <div class="container">
-                    <div class="row">
-                        <div class="grid_12">
-                            <h2>Serviços Adicionais</h2>
-                        </div>
-                        <div class="clearfix add-serv">
-                            {% for sa in serviceAd %}
-                            <div class="grid_6">
-                                <img src="{{ sa.imagemAd.thumb.url }}" alt="" class="img-ind w1">
-                                <div>
-                                    <p class="text-1"><a href="{{ sa.serviceAd }}">{{ sa.serviceAd }}</a></p>
-                                    <p>{{ sa.descricaoAd }}</p>
-                                </div>
+                    {% if serviceAd%}
+                        <div class="row">
+                            <div class="grid_12">
+                                <h2>Serviços Adicionais</h2>
                             </div>
-                            {% endfor %}
+                            <div class="clearfix add-serv">
+                                {% for sa in serviceAd %}
+                                <div class="grid_6">
+                                    <img src="{{ sa.imagemAd.thumb.url }}" alt="" class="img-ind w1">
+                                    <div>
+                                        <p class="text-1"><a href="{{ sa.serviceAd }}">{{ sa.serviceAd }}</a></p>
+                                        <p>{{ sa.descricaoAd }}</p>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
                         </div>
-                    </div>
+                    {% endif %}
                 </div>
             </section>
 

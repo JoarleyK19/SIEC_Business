@@ -1,6 +1,7 @@
 from django.contrib import admin
+from matplotlib.pyplot import cla
 
-from.models import Servico, ServicoAdicionais, Cargo, Funcionario, EmpresasParceiras, Noticias
+from.models import Servico, ServicoAdicionais, Cargo, Funcionario, EmpresasParceiras, Noticias, Testemunhos
 
 
 @admin.register(Servico)
@@ -31,3 +32,8 @@ class EmpresaParceiraAdmin(admin.ModelAdmin):
 @admin.register(Noticias)
 class NoticiasAdmin(admin.ModelAdmin):
     list_display = ('manchete', 'descricao', 'imagem', 'link', 'ativo', 'modificado')
+
+
+@admin.register(Testemunhos)
+class TestemunhosAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'depoimento', 'ativo', 'modificado')

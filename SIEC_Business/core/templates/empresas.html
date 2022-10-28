@@ -112,19 +112,21 @@
                     </div>
                 </div>
                 <div class="container">
-                    <div class="row">
-                        <div class="grid_12">
-                            <h2>Empresas Parceiras</h2>
-                        </div>
-                        <div class="clearfix clients">
-                            {% for e in empresas %}
-                            <div class="grid_3 box-3 maxheight1">
-                                <img src="{{ e.imagem.thumb.url }}" alt="" class="wrapper">
-                                <div class="inside"><div class="text-1"><a href="#">{{ e.empresa }}</a></div></div>
+                    {% if empresas %}
+                        <div class="row">
+                            <div class="grid_12">
+                                <h2>Empresas Parceiras</h2>
                             </div>
-                            {% endfor %}
+                            <div class="clearfix clients">
+                                {% for e in empresas %}
+                                <div class="grid_3 box-3 maxheight1">
+                                    <img src="{{ e.imagem.thumb.url }}" alt="" class="wrapper">
+                                    <div class="inside"><div class="text-1"><a href="#">{{ e.empresa }}</a></div></div>
+                                </div>
+                                {% endfor %}
+                            </div>
                         </div>
-                    </div>
+                    {% endif %}
                 </div>
             </section>
 
