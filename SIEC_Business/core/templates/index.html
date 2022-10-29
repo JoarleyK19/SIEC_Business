@@ -56,31 +56,31 @@
                 <div class="container" style="max-width:1230px;">
                     <div class="row">
                         <div class="grid_12">
-                            <h2>Our differential</h2>
+                            <h2>Nosso Diferencial</h2>
                         </div>
                         <div class="clearfix offer">
                             <div class="grid_4 clearfix box-1">
                                 <img src="{% static 'images/page-1_img-1.jpg' %}" alt="">
                                 <div class="inside">
-                                    <div class="title-1" style="padding-top: 37px">Training</div>
-                                    <div><p class="ext-capitalize fs-6" style="padding-bottom: 3px">Qualification for the training of new professionals.</p></div>
-                                    <a href="#" class="btn">more</a>
+                                    <div class="title-1" style="padding-top: 37px">Treinamento</div>
+                                    <div><p class="ext-capitalize fs-6" style="padding-bottom: 3px">Qualificação para a formação de novos profissionais.</p></div>
+                                    <!-- <a href="#" class="btn">more</a> -->
                                 </div>
                             </div>
                             <div class="grid_4 clearfix box-1">
                                 <img src="{% static 'images/page-1_img-2.jpg' %}" alt="">
                                 <div class="inside">
-                                    <div class="title-1" style="padding-top: 37px">Control</div>
-                                    <div><p class="ext-capitalize fs-6" style="padding-bottom: 3px">Use of new technologies for ore recovery is to reduce tailings.</p></div>
-                                    <a href="#" class="btn">more</a>
+                                    <div class="title-1" style="padding-top: 37px">Controle</div>
+                                    <div><p class="ext-capitalize fs-6" style="padding-bottom: 3px">O uso de novas tecnologias para recuperação de minério é reduzir rejeitos.</p></div>
+                                    <!-- <a href="#" class="btn">more</a> -->
                                 </div>
                             </div>
                             <div class="grid_4 clearfix box-1">
                                 <img src="{% static 'images/page-1_img-3.jpg' %}" alt="">
                                 <div class="inside">
-                                    <div class="title-1" style="padding-top: 37px">Security</div>
-                                    <div><p class="ext-capitalize fs-6" style="padding-bottom: 3px">A safe working environment ensures a healthy worker.</p></div>
-                                    <a href="#" class="btn">more</a>
+                                    <div class="title-1" style="padding-top: 37px">Segurança</div>
+                                    <div><p class="ext-capitalize fs-6" style="padding-bottom: 3px">Profissionais capacitados e treinados para sempre seguir as regras da segurança do trabalho.</p></div>
+                                    <!-- <a href="#" class="btn">more</a> -->
                                 </div>
                             </div>
                         </div>
@@ -157,21 +157,23 @@
                 </div>
             </div>
             {% if manchete %}
-                <div class="container" style="max-width:1230px;">
-                    <div class="row">
-                        <div class="grid_12">
-                            <h2 class="v1">Notícias</h2>
-                        </div>
-                        {% for n in manchete %}
-                            <div class="clearfix statements">
-                                <div class="grid_4" style="width: 30%;">
-                                    <img src="{{ n.imagem.thumb.url }}" alt="{{ n.noticia }}" class="wrapper">
-                                    <div class="text-3">{{ n.noticia }}</div>
-                                    <div>{{ n.descricao }}</div>
-                                    <a href="{{ n.link }}" class="btn" target="_blank" rel="noreferrer nofollow noopener">Saiba Mais</a>
-                                </div>
+                <div class="bg-2">
+                    <div class="container" style="max-width:1230px;">
+                        <div class="row">
+                            <div class="grid_12">
+                                <h2 class="v1">Notícias</h2>
                             </div>
-                        {% endfor %}
+                            {% for n in manchete %}
+                                <div class="clearfix statements">
+                                    <div class="grid_4" style="width: 30%;">
+                                        <img src="{{ n.imagem.thumb.url }}" alt="{{ n.noticia }}" class="wrapper">
+                                        <div class="text-3">{{ n.noticia }}</div>
+                                        <div>{{ n.descricao }}</div>
+                                        <a href="{{ n.link }}" class="btn" target="_blank" rel="noreferrer nofollow noopener">Saiba Mais</a>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
             {% endif %}
