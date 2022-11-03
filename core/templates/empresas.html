@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title>Clients</title>
+            <meta charset="utf-8">
+            <meta name = "format-detection" content = "telephone=no" />
+            <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+            <link rel="stylesheet" href="{% static 'css/stuck.css' %}">
+            <link rel="stylesheet" href="{% static 'css/style.css' %}">
+            <link rel="stylesheet" href="{% static 'css/superfish.css' %}">
+
+            <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
+            <!-- Icon -->
+            <link rel="stylesheet" href="{% static 'fonts/line-icons.css' %}">
+            <!-- Owl carousel -->
+            <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+            <link rel="stylesheet" href="{% static 'css/owl.theme.css' %}">
+
+            <!-- Animate -->
+            <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+            <!-- Main Style -->
+            <link rel="stylesheet" href="{% static 'css/main.css' %}">
+            <!-- Responsive Style -->
+            <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+
+            <!--[if lt IE 9]>
+               <div style=' clear: both; text-align:center; position: relative;'>
+                 <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+                   <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+                 </a>
+              </div>
+            <![endif]-->
+            <!--[if lt IE 9]>
+                <script src="{% static 'js/html5shiv.js' %}"></script>
+                <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/ie.css' %}">
+            <![endif]-->
+        </head>
+        <body id="top">
+            <!--==============================header=================================-->
+            <header>
+                {% block content%}
+                    {% include 'menu.html' %}
+
+            </header>
+
+            <!--=======content================================-->
+
+            <section class="content">
+                <div class="container" style="max-width:1230px;">
+                    <div class="row bot-2">
+                        <div class="grid_8">
+                            <h2>About Membership</h2>
+                            <div class="clearfix">
+                                <img src="{% static 'images/page-4_img-1.jpg' %}" alt="" class="img-ind w1 "/>
+                                <div>
+                                    <p class="text-1">Lorem ipsum dolor sit amet, consec tetuer adipiscing. Praesent vestibu lum molestie.</p>
+                                    <p>Phasellllus. porta. Fusce suscipit varius mium sociis totdnatibus et magis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sitat, consec tetuer adipiscing. Praesent vestibulum molestie lacus.</p>
+                                    <p>Aenean non ummy. Mauris accumsan nulla vel diam nascetur ridiculus mus. Nulla dui. Fusce feugiat male suada odio. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce scipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes. Sed faucibus, nisi ac ultrices congue.</p>
+                                    <div>Lorem ipsum dolor sitat, consec tetuer adipiscing. Praesent vestibulum molestie lacus. Aenean non ummy. Mauris accumsan nulla vel diam nascetur ridiculus mus. Nulla dui. Fusce feugiat male suada odio. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce scipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes. </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid_4">
+                            <h2>Working Conditions</h2>
+                            <p class="text-1">Nunc tempus quam ac vulputate dictum.</p>
+                            <div>Fusce suscipit varius mium sociis totdnatibus et magis dis part urient montes, nascetur ridiculus mus. Lorem ipsum dolor sitat, consec tetuer adipiscing. Praesent vestibulum molestie.</div>
+                            <ul class="list">
+                                <li><a href="#">Integer placerat tincidunt erat a pretium </a></li>
+                                <li><a href="#">Integer quis laoreet purus et fringilla</a></li>
+                                <li><a href="#">Lorem ipsum dolor sit consectetad</a></li>
+                                <li><a href="#">Tincidunt dolor nunc vule putateec sem</a></li>
+                                <li><a href="#">Pert laciniate ultricieupien disse eltel </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-2 bot-1">
+                    <div class="container">
+                        <div class="row">
+                            <div class="grid_12">
+                                <h2>Special Proposition</h2>
+                                <p class="text-1">Integer placerat tincidunt erat a pretium. Integer quis laoreet purus, et fringilla libero. Ut vitae nisl.</p>
+                                <div>Varius mium sociis totdnatibus et magis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sitat, consec tetuer adipiscing. Praesent vestibulum molestie lacus. Aenean non ummy. Mauris accumsan nulla vel diam nascetur ridiculus mus. Nulla dui. Fusce feugiat male suada odio. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce scipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes. Sed faucibus, nisi ac ultrices congue, ma uris justo rhoncus lacus, id laoreet nunc justo eget ante.</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="grid_4">
+                                <ul class="list">
+                                    <li><a href="#">Tincidunt erat a pretium integer quis laoreet purus </a></li>
+                                    <li><a href="#">Yringilla lorem ipsum dolor sit consectetad ate</a></li>
+                                    <li><a href="#">Tincidunt dolor nunc vule putateec sem pert lacini</a></li>
+                                </ul>
+                            </div>
+                            <div class="grid_4">
+                                <ul class="list">
+                                    <li><a href="#">Suspendisse consequat magna id nunc feugiat</a></li>
+                                    <li><a href="#">At dignissim arcu venenatis nulla pretium ornare orci </a></li>
+                                    <li><a href="#">Vulputate maecenas ultrices ligula nec egestas eleif</a></li>
+                                </ul>
+                            </div>
+                            <div class="grid_4">
+                                <ul class="list">
+                                    <li><a href="#">Sed sollicitudin ultrices varius praesent purus mi </a></li>
+                                    <li><a href="#">Ultrices et sollicitudin non cursus sed quam </a></li>
+                                    <li><a href="#">Nullam suscipit sem id velit porttitor amet male</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    {% if empresas %}
+                        <div class="row">
+                            <div class="grid_12">
+                                <h2>Empresas Parceiras</h2>
+                            </div>
+                            <div class="clearfix clients">
+                                {% for e in empresas %}
+                                <div class="grid_3 box-3 maxheight1">
+                                    <img src="{{ e.imagem.thumb.url }}" alt="" class="wrapper">
+                                    <div class="inside"><div class="text-1"><a href="#">{{ e.empresa }}</a></div></div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </section>
+
+
+
+
+            <!--=======footer=================================-->
+
+            {% include 'rodape.html' %}
+            <script src="{% static 'js/jquery.js' %}"></script>
+            <script src="{% static 'js/jquery-migrate-1.2.1.js' %}"></script>
+            <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+            <script src="{% static 'js/script.js' %}"></script>
+            <script src="{% static 'js/superfish.js' %}"></script>
+            <script src="{% static 'js/jquery.mobilemenu.js' %}"></script>
+
+            <script src="{% static 'js/tmStickUp.js' %}"></script>
+            <script src="{% static 'js/jquery.equalheights.js' %}"></script>
+            {% endblock %}
+        </body>
+    </html>
