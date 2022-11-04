@@ -1,1 +1,1 @@
-web: gunicorn SIEC_Business.wsgi --log-file -
+web: gunicorn app:SIEC_Business.wsgi --log-file -
