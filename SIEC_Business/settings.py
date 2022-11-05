@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+&j3l5$rm$2m=sw!2to2*2te)qkd58lm1#_nf7&)e5+z15)%ne
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['siecbusiness-sb.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -129,7 +129,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+print(f'arquivos staticos: {STATIC_ROOT}')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Email teste console
