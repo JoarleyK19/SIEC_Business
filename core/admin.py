@@ -1,7 +1,6 @@
 from django.contrib import admin
-from matplotlib.pyplot import cla
 
-from.models import Servico, ServicoAdicionais, Cargo, Funcionario, EmpresasParceiras, Noticias, Testemunhos
+from .models import Servico, ServicoAdicionais, Cargo, Funcionario, EmpresasParceiras, Noticias, Testemunhos
 
 
 @admin.register(Servico)
