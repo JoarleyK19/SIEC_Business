@@ -31,6 +31,12 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'core',
+    'bootstrap5',
+    
+    'django_adminlte',
+    'django_adminlte_theme',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,8 +44,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'core',
-    'bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -129,7 +133,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'core/static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'core/staticfiles')
 print(f'arquivos staticos: {STATIC_ROOT}')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
