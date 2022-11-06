@@ -25,7 +25,7 @@ class FuncionarioAdmin(admin.ModelAdmin):
 
 @admin.register(EmpresasParceiras)
 class EmpresaParceiraAdmin(admin.ModelAdmin):
-    list_display = ('empresa', 'ativo', 'modificado')
+    list_display = ('empresa', 'link', 'ativo', 'modificado')
 
 
 @admin.register(Noticias)

@@ -73,7 +73,8 @@ class Funcionario(Base):
 class EmpresasParceiras(Base):
     empresa = models.CharField('Empresa', max_length=100)
     imagem = StdImageField('Imagem', upload_to=get_file_path, variations={'thumb': {'width': 300, 'height': 300, 'crop': True}})
-
+    link = models.CharField('Link', max_length=300)
+    
     class Meta:
         verbose_name = 'Empresa Parceia'
         verbose_name_plural = 'Empresas Parceiras'
