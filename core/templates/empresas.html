@@ -48,69 +48,69 @@
 
             <!--=======content================================-->
 
-            <section class="content">
-                <div class="container" style="max-width:1230px;">
-                    <div class="row bot-2">
-                        <div class="grid_8">
-                            <h2>Nossas Parceiras</h2>
-                            <div class="clearfix">
-                                <img src="{% static 'images/page-4_img-1.jpg' %}" alt="" class="img-ind w1 "/>
-                                <div>
-                                    <p class="text-1">N/A</p>
-                                    <p>N/A</p>
-                                    <p>N/A</p>
-                                    <div>N/A</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid_4">
-                            <h2>Objetivo da parceria</h2>
-                            <p class="text-1">N/A</p>
-                            <div>N/A</div>
-                            <ul class="list">
-                                <li><a href="#">N/A</a></li>
-                                <li><a href="#">N/A</a></li>
-                                <li><a href="#">N/A</a></li>
-                                <li><a href="#">N/A</a></li>
-                                <li><a href="#">N/A </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-2 bot-1">
-                    <div class="container">
-                        <div class="row">
-                            <div class="grid_12">
-                                <h2>O que precisa para se tornar uma empresa parceira?</h2>
-                                <p class="text-1">N/A</p>
-                                <div>N/A</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="grid_4">
-                                <ul class="list">
-                                    <li><a href="#">N/A </a></li>
-                                    <li><a href="#">N/A</a></li>
-                                    <li><a href="#">N/A</a></li>
-                                </ul>
-                            </div>
-                            <div class="grid_4">
-                                <ul class="list">
-                                    <li><a href="#">N/A</a></li>
-                                    <li><a href="#">N/A </a></li>
-                                    <li><a href="#">N/A</a></li>
-                                </ul>
-                            </div>
-                            <div class="grid_4">
-                                <ul class="list">
-                                    <li><a href="#">N/A </a></li>
-                                    <li><a href="#">N/A </a></li>
-                                    <li><a href="#">N/A</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!--            <section class="content">-->
+<!--                <div class="container" style="max-width:1230px;">-->
+<!--                    <div class="row bot-2">-->
+<!--                        <div class="grid_8">-->
+<!--                            <h2>Nossas Parceiras</h2>-->
+<!--                            <div class="clearfix">-->
+<!--                                <img src="{% static 'images/page-4_img-1.jpg' %}" alt="" class="img-ind w1 "/>-->
+<!--                                <div>-->
+<!--                                    <p class="text-1">N/A</p>-->
+<!--                                    <p>N/A</p>-->
+<!--                                    <p>N/A</p>-->
+<!--                                    <div>N/A</div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="grid_4">-->
+<!--                            <h2>Objetivo da parceria</h2>-->
+<!--                            <p class="text-1">N/A</p>-->
+<!--                            <div>N/A</div>-->
+<!--                            <ul class="list">-->
+<!--                                <li><a href="#">N/A</a></li>-->
+<!--                                <li><a href="#">N/A</a></li>-->
+<!--                                <li><a href="#">N/A</a></li>-->
+<!--                                <li><a href="#">N/A</a></li>-->
+<!--                                <li><a href="#">N/A </a></li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="bg-2 bot-1">-->
+<!--                    <div class="container">-->
+<!--                        <div class="row">-->
+<!--                            <div class="grid_12">-->
+<!--                                <h2>O que precisa para se tornar uma empresa parceira?</h2>-->
+<!--                                <p class="text-1">N/A</p>-->
+<!--                                <div>N/A</div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="row">-->
+<!--                            <div class="grid_4">-->
+<!--                                <ul class="list">-->
+<!--                                    <li><a href="#">N/A </a></li>-->
+<!--                                    <li><a href="#">N/A</a></li>-->
+<!--                                    <li><a href="#">N/A</a></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                            <div class="grid_4">-->
+<!--                                <ul class="list">-->
+<!--                                    <li><a href="#">N/A</a></li>-->
+<!--                                    <li><a href="#">N/A </a></li>-->
+<!--                                    <li><a href="#">N/A</a></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                            <div class="grid_4">-->
+<!--                                <ul class="list">-->
+<!--                                    <li><a href="#">N/A </a></li>-->
+<!--                                    <li><a href="#">N/A </a></li>-->
+<!--                                    <li><a href="#">N/A</a></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
                 <div class="container">
                     {% if empresas %}
                         <div class="row">
@@ -120,7 +120,7 @@
                             <div class="clearfix clients">
                                 {% for e in empresas %}
                                 <div class="grid_3 box-3 maxheight1">
-                                    <img src="{{ e.imagem.thumb.url }}" alt="" class="wrapper">
+                                    <img src="{{ e.imagem.thumb.url }}" alt="" class="wrapper2">
                                     <div class="inside"><div class="text-1"><a href="{{ e.link }}" target="_blank" rel="noopener nofollow noreferrer">{{ e.empresa }}</a></div></div>
                                 </div>
                                 {% endfor %}

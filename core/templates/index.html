@@ -3,10 +3,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>FVJS Gestão de Projetos</title>
+        <title>SIEC Business</title>
         <meta charset="utf-8">
         <meta name = "format-detection" content = "telephone=yes" />
-        <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+        <link rel="icon" href="{% static 'images/logoSemFundo.png' %}" type="image/x-icon">
         {% bootstrap_css %}
         <link rel="stylesheet" href="{% static 'css/stuck.css' %}">        
         <link rel="stylesheet" href="{% static 'css/camera.css' %}">
@@ -166,7 +166,7 @@
                             <div class="clearfix statements">
                                     {% for n in manchete %}
                                         <div class="grid_4" style="width: 30%;">
-                                            <img src="{{ n.imagem.thumb.url }}" alt="{{ n.noticia }}" class="wrapper">
+                                            <img src="{{ n.imagem.thumb.url }}" alt="{{ n.noticia }}" class="wrapper2">
                                             <div class="text-3">{{ n.noticia }}</div>
                                             <div>{{ n.descricao }}</div>
                                             <a href="{{ n.link }}" class="btn" target="_blank" rel="noreferrer nofollow noopener">Saiba Mais</a>
