@@ -61,6 +61,7 @@
                                     <a href="{{ s.imagem.thumb.url }}" class="magnifier"><img src="{{ s.imagem.thumb.url }}" alt=""></a>
                                     <p class="text-1"><a href="#">{{ s.service }}</a></p>
                                     <div>{{ s.descricao }}</div>
+                                    <a href="#" class="btn">more</a>
                                 </div>
                             </div>
                             {% endfor %}
@@ -113,11 +114,13 @@
                             </div>
                             {% for sa in serviceAd %}
                                 <div class="clearfix services">
-                                    <div class="grid_4" style="width:250px;">
-                                        <a href="{{ sa.imagem.thumb.url }}" class="magnifier"><img src="{{ sa.imagem.thumb.url }}" alt=""></a>
-                                        <p class="text-1"><a href="#">{{ sa.serviceAd }}</a></p>
-                                        <div>{{ s.descricaoAd }}</div>
-                                    </div>
+                                       <div class="grid_6">
+                                           <img src="{{ sa.imagemAd.url }}" alt="" class="img-ind w1">
+                                           <div>
+                                               <p class="text-1"><a href="{{ sa.serviceAd }}">{{ sa.serviceAd }}</a></p>
+                                               <p>{{ sa.descricaoAd }}</p>
+                                           </div>
+                                       </div>
                                 </div>
                             {% endfor %}
                         </div>
