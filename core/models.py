@@ -31,7 +31,7 @@ class Servico(Base):
 class ServicoAdicionais(Base):
     serviceAd = models.CharField('Serviço', max_length=100)
     descricaoAd = models.TextField('Descrição', max_length=500)
-    imagemAd = StdImageField('Imagem', upload_to=get_file_path, variations={'thumb': {'width': 380, 'height': 380, 'crop': True}})
+    imagemAd = models.ImageField('Imagem', upload_to=get_file_path)
 
     class Meta:
         verbose_name = 'Serviço Adicional'
