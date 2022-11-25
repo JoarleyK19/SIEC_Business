@@ -113,15 +113,15 @@
                                 <h2>Serviços Adicionais</h2>
                             </div>
                             <div class="clearfix add-serv">
-                                {% for sa in serviceAd %}
                                 <div class="grid_6">
-                                    <img src="{{ sa.imagemAd.thumb.url }}" alt="" class="img-ind w1">
-                                    <div>
-                                        <p class="text-1"><a href="{{ sa.serviceAd }}">{{ sa.serviceAd }}</a></p>
-                                        <p>{{ sa.descricaoAd }}</p>
-                                    </div>
+                                   {% for sa in serviceAd %}
+                                        <img src="{{ sa.imagemAd.thumb.url }}" alt="" class="img-ind w1">
+                                        <div>
+                                            <p class="text-1"><a href="{{ sa.serviceAd }}">{{ sa.serviceAd }}</a></p>
+                                            <p>{{ sa.descricaoAd }}</p>
+                                        </div>
+                                   {% endfor %}
                                 </div>
-                                {% endfor %}
                             </div>
                         </div>
                     {% endif %}
