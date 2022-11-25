@@ -114,7 +114,7 @@
                             {% for sa in serviceAd %}
                                 <div class="clearfix services">
                                     <div class="grid_4" style="width:250px;">
-                                        <a href="{{ sa.imagem.url }}" class="magnifier"><img src="{{ sa.imagem.url }}" alt=""></a>
+                                        <a href="{{ sa.imagem.thumb.url }}" class="magnifier"><img src="{{ sa.imagem.thumb.url }}" alt=""></a>
                                         <p class="text-1"><a href="#">{{ sa.serviceAd }}</a></p>
                                         <div>{{ s.descricaoAd }}</div>
                                     </div>
